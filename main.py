@@ -20,7 +20,7 @@ def load_models():
             return sorted(d.glob('*.joblib'))
     return []
 
-def prepare(df):
+def prepare(df, expected_cols=None):
     # minimal, relies on saved encoders
     be, oe, ohe, scaler = [joblib.load(p) for p in ENC_PATHS.values()]
     binary_cols = ['GENERO', 'POSEE_AUTO']
@@ -41,9 +41,17 @@ def prepare(df):
     Xrem.columns = [f'remainder__{c}' for c in Xrem.columns]
 
     Xcand = pd.concat([Xb, Xo, Xoh, Xrem], axis=1)
-    train_cols_path = BASE / 'X_train_balanced.csv'
-    if train_cols_path.exists():
-        cols = pd.read_csv(train_cols_path, nrows=0).columns.tolist()
+    # Align columns to expected_cols if provided, else try X_train_balanced.csv as fallback.
+    cols = None
+    if expected_cols is not None:
+        cols = list(expected_cols)
+    else:
+        train_cols_path = BASE / 'X_train_balanced.csv'
+        if train_cols_path.exists():
+            cols = pd.read_csv(train_cols_path, nrows=0).columns.tolist()
+
+    if cols is not None:
+        # add missing cols with zeros and order
         for c in cols:
             if c not in Xcand.columns:
                 Xcand[c] = 0
@@ -76,8 +84,16 @@ model_names = [p.name for p in models]
 sel = st.selectbox('', model_names, index=0)
 mdl = joblib.load(models[model_names.index(sel)])
 
+# Prefer feature names stored in the model to avoid depending on models/X_train_balanced.csv
+expected_cols = None
+if hasattr(mdl, 'feature_names_in_'):
+    try:
+        expected_cols = list(mdl.feature_names_in_)
+    except Exception:
+        expected_cols = None
+
 try:
-    Xp = prepare(df.copy())
+    Xp = prepare(df.copy(), expected_cols=expected_cols)
 except Exception as e:
     st.error('Error al preparar datos: ' + str(e))
     st.stop()
