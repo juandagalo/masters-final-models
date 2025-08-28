@@ -71,6 +71,11 @@ if uploaded is not None:
 elif Path('X_nuevo_prediccion.csv').exists():
     df = pd.read_csv('X_nuevo_prediccion.csv')
 
+# Remove unwanted column if present in user input
+if df is not None:
+    # drop both from uploaded data and local default file if present
+    df = df.drop(columns=['DESC_INGRESO_HOGAR'], errors='ignore')
+
 if df is None:
     st.info('Sube un CSV o coloca X_nuevo_prediccion.csv en el directorio.')
     st.stop()
@@ -100,11 +105,11 @@ except Exception as e:
 
 pred = mdl.predict(Xp)
 out = df.copy()
-out['prediction'] = pred
 if hasattr(mdl, 'predict_proba'):
     probs = mdl.predict_proba(Xp)
     for i in range(probs.shape[1]):
         out[f'prob_{i}'] = probs[:, i]
+out['prediction'] = pred
 
 st.dataframe(out)
 

@@ -1,11 +1,11 @@
-GENERO,DESC_ESCOLARIDAD_MAX,DESC_OCUPACION,DESC_DEDICACION_LABORAL,DESC_SECTOR_LABORAL,DESC_NIVEL_LABORAL,DESC_LUGAR_LABORA,HORA_OFICIAL_INICIO_LABORAL,DESC_RAZON_NO_VIAJO,MODO_USA_POR_PyP,DESC_RAZON_ELECCION_MODO_2,DESC_MODO_TTE_ACTUAL,DESC_ALTERNATIVA_TTE_BICI,DESC_INGRESO_HOGAR,REQUIERE_AYUDA,POSEE_AUTO,EDAD,NRO_DIFICULTAD_ACCESOS,CANTIDAD_HABITANTES
-1,Universitario,Trabajador Dependiente,Tiempo completo,Educación,Profesional,Empresa,7:00:00,No Aplica,Bus,Es más económico,Bus/Buseta/Microbus,No,2'500.001-3'500.000,No,Sí,35,1,4
-2,Bachillerato,Estudiante,Tiempo Parcial,No responde,Asistencial,Casa,8:00:00,No quiso/No necesito salir,A pie,Es más cómodo,A pie,Sí,Menor a 738.000,Sí,No,19,0,6
-1,Posgrado,Jubilado,No responde,Salud,Directivo,Otro,9:00:00,Estaba enfermo,Taxi,Es más seguro,Taxi,No Aplica,Más de 7'000.000,No,Sí,67,2,2
-2,Técnico,Ama de casa,Voluntario o no remunerado,"Servicios comunales, sociales y personales",Socio(a) o propietario(a),Casa,6:00:00,Debía cuidar a alguien,No Aplica,No Aplica,A pie,No,$738.000-1'500.000,Sí,No,45,3,5
-1,Tecnológico,Trabajador Independiente,Jornal,Construcción,Operativo,En la calle,5:00:00,Por el clima,Moto,El tiempo de viaje es menor,Motocicleta,Sí,1'500.001-2'250.000,No,Sí,28,0,3
-2,Primaria,Desempleado,No responde,Otros servicios,Otro,No responde,10:00:00,No contaba con el dinero para pagar el transporte,No viaja,No responde,No responde,No,5'000.001-7'000.000,Sí,No,52,2,7
-1,Educación No formal,Rentista,Por Horas,"Financiero, seguros y bienes inmuebles",Profesional,Empresa,12:00:00,Esperaba la llegada o la llamadade alguien,Un auto sin PyP,Es el único modo que le sirve,Autómovil,No Aplica,3'501.000-5'000.000,No,Sí,40,1,2
-2,Ninguno,Ama de casa y estudiante,Voluntario o no remunerado,Gobierno,Técnico,Terminal o estación,4:30:00,Pico y Placa,Como acompañante en otro auto,Razones Ambientales,Bicicleta propia,Sí,$738.000-1'500.000,No,No,22,0,8
-1,Noveno Grado,Trabajador y estudiante,Tiempo completo,Industria,Operativo,Vendedor ambulante,5:30:00,Debía trabajar en casa,Metro,Es más cercano de su lugar de origen,Metro,No,1'500.001-2'250.000,Sí,No,31,1,5
-2,No responde,Incapacidad Permanente,No responde,Agricultura-Pesca-Minería,No responde,No responde,0:00:00,No responde,No responde,No responde,No responde,No Aplica,Menor a 738.000,Sí,No,60,3,1
+GENERO,DESC_ESCOLARIDAD_MAX,DESC_OCUPACION,DESC_DEDICACION_LABORAL,DESC_SECTOR_LABORAL,DESC_NIVEL_LABORAL,DESC_LUGAR_LABORA,HORA_OFICIAL_INICIO_LABORAL,DESC_RAZON_NO_VIAJO,MODO_USA_POR_PyP,DESC_RAZON_ELECCION_MODO_2,DESC_MODO_TTE_ACTUAL,DESC_ALTERNATIVA_TTE_BICI,REQUIERE_AYUDA,POSEE_AUTO,EDAD,NRO_DIFICULTAD_ACCESOS,CANTIDAD_HABITANTES
+1,Universitario,Trabajador Dependiente,Tiempo completo,Educación,Profesional,Empresa,7:00:00,No Aplica,Bus,Es más económico,Bus/Buseta/Microbus,No,No,Sí,35,1,4
+2,Bachillerato,Estudiante,Tiempo Parcial,No responde,Asistencial,Casa,8:00:00,No quiso/No necesito salir,A pie,Es más cómodo,A pie,Sí,Sí,No,19,0,6
+1,Posgrado,Jubilado,No responde,Salud,Directivo,Otro,9:00:00,Estaba enfermo,Taxi,Es más seguro,Taxi,No,No,Sí,67,2,2
+2,Técnico,Ama de casa,Voluntario o no remunerado,"Servicios comunales, sociales y personales",Socio(a) o propietario(a),Casa,6:00:00,Debía cuidar a alguien,No Aplica,No Aplica,A pie,No,Sí,No,45,3,5
+1,Tecnológico,Trabajador Independiente,Jornal,Construcción,Operativo,En la calle,5:00:00,Por el clima,Moto,El tiempo de viaje es menor,Motocicleta,Sí,No,Sí,28,0,3
+2,Primaria,Desempleado,No responde,Otros servicios,Otro,No responde,10:00:00,No contaba con el dinero para pagar el transporte,No viaja,No responde,No responde,No,Sí,No,52,2,7
+1,Educación No formal,Rentista,Por Horas,"Financiero, seguros y bienes inmuebles",Profesional,Empresa,12:00:00,Esperaba la llegada o la llamadade alguien,Un auto sin PyP,Es el único modo que le sirve,Autómovil,No,No,Sí,40,1,2
+2,Ninguno,Ama de casa y estudiante,Voluntario o no remunerado,Gobierno,Técnico,Terminal o estación,4:30:00,Pico y Placa,Como acompañante en otro auto,Razones Ambientales,Bicicleta propia,Sí,No,No,22,0,8
+1,Noveno Grado,Trabajador y estudiante,Tiempo completo,Industria,Operativo,Vendedor ambulante,5:30:00,Debía trabajar en casa,Metro,Es más cercano de su lugar de origen,Metro,No,Sí,No,31,1,5
+2,No responde,Incapacidad Permanente,No responde,Agricultura-Pesca-Minería,No responde,No responde,0:00:00,No responde,No responde,No responde,No responde,No Aplica,Sí,No,60,3,1
