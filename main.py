@@ -34,7 +34,7 @@ def prepare(df):
     for i, cats in enumerate(ohe.categories_):
         name = ohe_in[i]
         ohe_cols += [f"{name}__{c}" for c in cats]
-    Xoh = pd.DataFrame(ohe.transform(df[ohe_in]).toarray(), columns=ohe_cols)
+    Xoh = pd.DataFrame(ohe.transform(df[ohe_in]), columns=ohe_cols)
 
     remainder = [c for c in df.columns if c not in (binary_cols + ordinal_cols + ohe_in)]
     Xrem = df[remainder].copy()
